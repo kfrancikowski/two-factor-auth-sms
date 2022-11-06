@@ -2,7 +2,9 @@
 
 namespace Kfrancikowski\TwoFactorAuthSms;
 
-class TwoFactorAuthSmsServiceProvider
+use Illuminate\Support\ServiceProvider;
+
+class TwoFactorAuthSmsServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {

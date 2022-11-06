@@ -4,12 +4,11 @@ namespace Kfrancikowski\TwoFactorAuthSms;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Str;
 use Kfrancikowski\TwoFactorAuthSms\Enums\TwoFactorSmsStatus;
 use Kfrancikowski\TwoFactorAuthSms\Models\Users2faSms;
-use Kfrancikowski\TwoFactorAuthSms\Providers\Provider;
-use Kfrancikowski\TwoFactorAuthSms\Providers\SmsApi;
-use Kfrancikowski\TwoFactorAuthSms\Providers\Twilio;
+use Kfrancikowski\TwoFactorAuthSms\SmsProviders\Provider;
+use Kfrancikowski\TwoFactorAuthSms\SmsProviders\SmsApi;
+use Kfrancikowski\TwoFactorAuthSms\SmsProviders\Twilio;
 
 class TwoFactorAuthSms
 {

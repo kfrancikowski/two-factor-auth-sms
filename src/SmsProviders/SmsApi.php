@@ -1,6 +1,6 @@
 <?php
 
-namespace Kfrancikowski\TwoFactorAuthSms\Providers;
+namespace Kfrancikowski\TwoFactorAuthSms\SmsProviders;
 
 use Smsapi\Client\Feature\Sms\Bag\SendSmsBag;
 use Smsapi\Client\Curl\SmsapiHttpClient;

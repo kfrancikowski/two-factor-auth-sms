@@ -1,6 +1,6 @@
 <?php
 
-namespace Kfrancikowski\TwoFactorAuthSms\Providers;
+namespace Kfrancikowski\TwoFactorAuthSms\SmsProviders;
 
 abstract class Provider implements TwoFactorAuthSmsProviderInterface
 {

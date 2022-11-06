@@ -1,6 +1,6 @@
 <?php
 
-namespace Kfrancikowski\TwoFactorAuthSms\Providers;
+namespace Kfrancikowski\TwoFactorAuthSms\SmsProviders;
 
 interface TwoFactorAuthSmsProviderInterface
 {
