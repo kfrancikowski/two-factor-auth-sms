@@ -1,14 +1,14 @@
 <?php
 
-namespace Kfrancikowski\TwoFactorAuthSms\SmsProviders;
+namespace Kfrancikowski\TwoFactorSms\SmsProviders;
 
-abstract class Provider implements TwoFactorAuthSmsProviderInterface
+abstract class Provider implements TwoFactorSmsProviderInterface
 {
     protected string $name;
 
     protected function getContent(string $code): string
     {
-        return __('twofactorauthsms.message', ['code' => $code]);
+        return __('twofactorsms.message', ['code' => $code]);
     }
 
     public function getName(): string

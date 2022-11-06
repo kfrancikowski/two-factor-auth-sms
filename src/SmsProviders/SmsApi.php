@@ -1,6 +1,6 @@
 <?php
 
-namespace Kfrancikowski\TwoFactorAuthSms\SmsProviders;
+namespace Kfrancikowski\TwoFactorSms\SmsProviders;
 
 use Smsapi\Client\Feature\Sms\Bag\SendSmsBag;
 use Smsapi\Client\Curl\SmsapiHttpClient;
@@ -16,7 +16,7 @@ class SmsApi extends Provider
     {
         $client = new SmsapiHttpClient();
 
-        $client->smsapiComService(config('twofactorauthsms.providers.smsapi.token'))
+        $client->smsapiComService(config('twofactorsms.providers.smsapi.token'))
             ->smsFeature()
             ->sendSms(SendSmsBag::withMessage($to, $this->getContent($code)));
     }

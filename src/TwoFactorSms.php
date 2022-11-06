@@ -1,16 +1,15 @@
 <?php
 
-namespace Kfrancikowski\TwoFactorAuthSms;
+namespace Kfrancikowski\TwoFactorSms;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
-use Kfrancikowski\TwoFactorAuthSms\Enums\TwoFactorSmsStatus;
-use Kfrancikowski\TwoFactorAuthSms\Models\Users2faSms;
-use Kfrancikowski\TwoFactorAuthSms\SmsProviders\Provider;
-use Kfrancikowski\TwoFactorAuthSms\SmsProviders\SmsApi;
-use Kfrancikowski\TwoFactorAuthSms\SmsProviders\Twilio;
+use Kfrancikowski\TwoFactorSms\Enums\TwoFactorSmsStatus;
+use Kfrancikowski\TwoFactorSms\SmsProviders\Provider;
+use Kfrancikowski\TwoFactorSms\SmsProviders\SmsApi;
+use Kfrancikowski\TwoFactorSms\SmsProviders\Twilio;
 
-class TwoFactorAuthSms
+class TwoFactorSms
 {
     private array $providers = [
         'smsapi' => SmsApi::class,
@@ -32,7 +31,7 @@ class TwoFactorAuthSms
         $this->send($user2faSms, $provider);
     }
 
-    private function send(Users2faSms $users2faSms, Provider $provider): void
+    private function send(Models\TwoFactorSms $users2faSms, Provider $provider): void
     {
         $provider->sendAuthCode($users2faSms->phone, $users2faSms->code);
 

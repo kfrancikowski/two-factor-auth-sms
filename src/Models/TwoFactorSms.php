@@ -1,11 +1,10 @@
 <?php
 
-namespace Kfrancikowski\TwoFactorAuthSms\Models;
+namespace Kfrancikowski\TwoFactorSms\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Carbon;
-use Kfrancikowski\TwoFactorAuthSms\Enums\TwoFactorSmsStatus;
+use Kfrancikowski\TwoFactorSms\Enums\TwoFactorSmsStatus;
 
 /**
  * @property int $authenticatable_id
@@ -20,7 +19,7 @@ use Kfrancikowski\TwoFactorAuthSms\Enums\TwoFactorSmsStatus;
  * @property ?Carbon $updated_at
  */
 
-class Users2faSms extends Model
+class TwoFactorSms extends Model
 {
     public $fillable = ['status', 'code', 'phone'];
 

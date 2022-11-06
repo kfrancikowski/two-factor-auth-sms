@@ -8,7 +8,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('users_2fa_sms', function (Blueprint $table) {
+        Schema::create('two_factor_sms', function (Blueprint $table) {
             $table->id();
             $table->morphs('authenticatable');
             $table->string('phone');
@@ -23,6 +23,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('users_2fa_sms');
+        Schema::dropIfExists('two_factor_sms');
     }
 };

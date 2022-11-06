@@ -1,6 +1,6 @@
 <?php
 
-namespace Kfrancikowski\TwoFactorAuthSms\SmsProviders;
+namespace Kfrancikowski\TwoFactorSms\SmsProviders;
 
 use Twilio\Rest\Client;
 
@@ -13,10 +13,10 @@ class Twilio extends Provider
 
     public function sendAuthCode(string $to, string $code): void
     {
-        $client = new Client(config('twofactorauthsms.providers.twilio.sid'), config('twofactorauthsms.providers.twilio.token'));
+        $client = new Client(config('twofactorsms.providers.twilio.sid'), config('twofactorsms.providers.twilio.token'));
 
         $client->messages->create($to, [
-            'from' => config('twofactorauthsms.from'),
+            'from' => config('twofactorsms.from'),
             'body' => $this->getContent($code),
         ]);
     }

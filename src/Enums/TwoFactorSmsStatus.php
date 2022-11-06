@@ -1,6 +1,6 @@
 <?php
 
-namespace Kfrancikowski\TwoFactorAuthSms\Enums;
+namespace Kfrancikowski\TwoFactorSms\Enums;
 
 enum TwoFactorSmsStatus: string
 {
