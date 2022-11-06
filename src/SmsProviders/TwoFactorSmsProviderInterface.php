@@ -1,8 +1,8 @@
 <?php
 
-namespace Kfrancikowski\TwoFactorAuthSms\SmsProviders;
+namespace Kfrancikowski\TwoFactorSms\SmsProviders;
 
-interface TwoFactorAuthSmsProviderInterface
+interface TwoFactorSmsProviderInterface
 {
     public function getName(): string;
     public function sendAuthCode(string $to, string $code): void;
