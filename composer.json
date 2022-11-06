@@ -1,0 +1,28 @@
+{
+    "name": "kfrancikowski/two-factor-auth-sms",
+    "description": "Package to add 2FA to user model in Laravel with SMS code confirmation.",
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "laravel/laravel": "^9.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "twilio/sdk": "dev-main",
+        "smsapi/php-client": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kfrancikowski\\TwoFactorAuthSms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Krystian Francikowski",
+            "email": "kfrancikowski@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
