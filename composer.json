@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "php": "^8.1",
-        "laravel/laravel": "^9.0",
+        "laravel/framework": "^9.0",
         "guzzlehttp/guzzle": "^7.0",
         "twilio/sdk": "dev-main",
         "smsapi/php-client": "dev-master"
