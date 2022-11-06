@@ -2,7 +2,7 @@
 
 namespace Kfrancikowski\TwoFactorAuthSms\Providers;
 
-abstract class Provider
+abstract class Provider implements TwoFactorAuthSmsProviderInterface
 {
     protected string $name;
 

@@ -3,16 +3,16 @@
 namespace Kfrancikowski\TwoFactorAuthSms\Providers;
 
 use Smsapi\Client\Feature\Sms\Bag\SendSmsBag;
-use Smsapi\Client\SmsapiHttpClient;
+use Smsapi\Client\Curl\SmsapiHttpClient;
 
-class SmsApi extends Provider implements TwoFactorAuthSmsProviderInterface
+class SmsApi extends Provider
 {
     public function __construct()
     {
         $this->name = 'SmsApi';
     }
 
-    public function sendAuthCode(string $from, string $to, string $code): void
+    public function sendAuthCode(string $to, string $code): void
     {
         $client = new SmsapiHttpClient();
 

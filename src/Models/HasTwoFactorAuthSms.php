@@ -5,11 +5,11 @@ namespace Kfrancikowski\TwoFactorAuthSms\Models;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 use Kfrancikowski\TwoFactorAuthSms\TwoFactorAuthSms;
 
-trait HasTwoFactorAuthSmsTrait
+trait HasTwoFactorAuthSms
 {
     public function twoFactorSmsCodes(): MorphMany
     {
-        $this->morphMany(Users2faSms::class, 'authenticatable');
+        return $this->morphMany(Users2faSms::class, 'authenticatable');
     }
 
     public function sendSmsAuthCode(string $phone): void
