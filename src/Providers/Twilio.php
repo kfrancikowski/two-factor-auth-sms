@@ -11,18 +11,13 @@ class Twilio extends Provider implements TwoFactorAuthSmsProviderInterface
         $this->name = 'Twilio';
     }
 
-    public function getName(): string
-    {
-        // TODO: Implement getName() method.
-    }
-
-    public function sendCode(string $from, string $to, string $message): bool
+    public function sendAuthCode(string $from, string $to, string $code): void
     {
         $client = new Client(config('twofactorauthsms.providers.twilio.sid'), config('twofactorauthsms.providers.twilio.token'));
 
         $client->messages->create($to, [
             'from' => $from,
-            'body' => ''
+            'body' => $this->getContent($code),
         ]);
     }
 }

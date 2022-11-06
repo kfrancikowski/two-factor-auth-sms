@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('code');
             $table->string('status');
             $table->smallInteger('failed_attempts')->default(0);
-            $table->dateTime('sent_at');
+            $table->dateTime('sent_at')->nullable();
             $table->dateTime('confirmed_at')->nullable();
             $table->timestamps();
         });

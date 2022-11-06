@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'auth_code' => 'Your auth code is: :code',
+    'auth_code' => 'Twój kod autoryzacyjny: :code',
 ];

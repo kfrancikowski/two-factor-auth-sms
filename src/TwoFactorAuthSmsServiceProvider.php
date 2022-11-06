@@ -14,7 +14,7 @@ class TwoFactorAuthSmsServiceProvider
         $this->loadTranslationsFrom(__DIR__.'/../lang', 'twofactorauthsms');
 
         $this->publishes([
-            __DIR__.'/../lang' => $this->app->langPath('vendor/twofactorauthsms'),
+            __DIR__.'/../lang' => $this->app->langPath('twofactorauthsms'),
         ]);
     }
 }
