@@ -10,8 +10,11 @@ return [
             'sid' => env('TWO_FACTOR_SMS_TWILIO_SID'),
             'token' => env('TWO_FACTOR_SMS_TWILIO_TOKEN'),
         ],
-        'smsapi' => [
-            'token' => env('TWO_FACTOR_SMS_SMSAPI_TOKEN')
+        'smsapipl' => [
+            'token' => env('TWO_FACTOR_SMS_SMSAPIPL_TOKEN')
+        ],
+        'smsapicom' => [
+            'token' => env('TWO_FACTOR_SMS_SMSAPICOM_TOKEN')
         ]
     ]
 ];

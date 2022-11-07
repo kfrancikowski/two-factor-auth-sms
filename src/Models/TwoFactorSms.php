@@ -21,9 +21,10 @@ use Kfrancikowski\TwoFactorSms\Enums\TwoFactorSmsStatus;
 
 class TwoFactorSms extends Model
 {
-    public $fillable = ['status', 'code', 'phone'];
+    public $fillable = ['status', 'code', 'phone', 'sent_at', 'failed_attempts'];
 
     public $casts = [
+        'phone' => 'string',
         'authenticatable_id' => 'integer',
         'authenticatable_type' => 'string',
         'status' => TwoFactorSmsStatus::class,

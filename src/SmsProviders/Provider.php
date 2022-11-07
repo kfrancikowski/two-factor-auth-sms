@@ -8,7 +8,7 @@ abstract class Provider implements TwoFactorSmsProviderInterface
 
     protected function getContent(string $code): string
     {
-        return __('twofactorsms.message', ['code' => $code]);
+        return __('twofactorsms::message.auth_code', ['code' => $code]);
     }
 
     public function getName(): string
